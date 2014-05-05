@@ -48,9 +48,9 @@
             </div>
             <div class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="index.jsp">Home</a></li>
+                <li><a href="about.jsp">About</a></li>
+                <li><a href="contact.jsp">Contact</a></li>
                 <li class="active"><a href="#">My Account</a></li>
                 <li><a href="logout">Logout</a></li>
               </ul>
@@ -65,7 +65,7 @@
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
       <div class="carousel-inner">
         <div class="item active">
-          <img src="images\nursery3.jpg" alt="Nursery">
+          <img src="images\snowdropGarden.jpg" alt="Nursery">
           <div class="container">
             <div class="carousel-caption">
               <h1>Welcome</h1>

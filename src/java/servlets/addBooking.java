@@ -8,7 +8,6 @@ package servlets;
 
 import classes.DBConnection;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -69,9 +68,7 @@ public class addBooking extends HttpServlet {
             throws ServletException, IOException {
         try {
             processRequest(request, response);
-        } catch (SQLException ex) {
-            Logger.getLogger(addBooking.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (ClassNotFoundException ex) {
+        } catch (SQLException | ClassNotFoundException ex) {
             Logger.getLogger(addBooking.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
@@ -89,9 +86,7 @@ public class addBooking extends HttpServlet {
             throws ServletException, IOException {
         try {
             processRequest(request, response);
-        } catch (SQLException ex) {
-            Logger.getLogger(addBooking.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (ClassNotFoundException ex) {
+        } catch (SQLException | ClassNotFoundException ex) {
             Logger.getLogger(addBooking.class.getName()).log(Level.SEVERE, null, ex);
         }
     }

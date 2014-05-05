@@ -16,7 +16,6 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -65,9 +64,7 @@ public class editBooking extends HttpServlet {
             throws ServletException, IOException {
         try {
             processRequest(request, response);
-        } catch (SQLException ex) {
-            Logger.getLogger(editBooking.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (ClassNotFoundException ex) {
+        } catch (SQLException | ClassNotFoundException ex) {
             Logger.getLogger(editBooking.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
@@ -85,9 +82,7 @@ public class editBooking extends HttpServlet {
             throws ServletException, IOException {
         try {
             processRequest(request, response);
-        } catch (SQLException ex) {
-            Logger.getLogger(editBooking.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (ClassNotFoundException ex) {
+        } catch (SQLException | ClassNotFoundException ex) {
             Logger.getLogger(editBooking.class.getName()).log(Level.SEVERE, null, ex);
         }
     }

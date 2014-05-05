@@ -39,13 +39,13 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="index.html">Willow Childcare Centre</a>
+              <a class="navbar-brand" href="index.jsp">Willow Childcare Centre</a>
             </div>
             <div class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="index.jsp">Home</a></li>
+                <li><a href="about.jsp">About</a></li>
+                <li><a href="contact.jsp">Contact</a></li>
 		<li class="active"><a href="#">Login</a></li>
               </ul>
             </div>
@@ -65,8 +65,7 @@
               <form action="login" method="post">
                 <p>Username: <font color="black"><input type="text" name="j_username"><br><br></font>
 		Password: <font color="black"><input type="password" name="j_password"><br><br></font></p>
-		<a class="btn btn-lg btn-primary" role="button">Login</a>
-                <font color="black"><input type="submit" value="Login"></font>
+                <input class="btn btn-lg btn-primary" type="submit" value="Login">
               </form>
             </div>
           </div>

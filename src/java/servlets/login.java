@@ -8,6 +8,7 @@ package servlets;
 
 import classes.DBConnection;
 import java.io.IOException;
+import static java.lang.System.out;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -51,7 +52,8 @@ public class login extends HttpServlet {
             session.setAttribute("id", correctCredentials);
             response.sendRedirect("relativeHome.jsp");
         } else{
-            System.out.println("Incorrect");
+            System.out.println("Incorrect Combination");
+            response.sendRedirect("incorrectLogin.jsp");
         }
     }
 
@@ -69,9 +71,7 @@ public class login extends HttpServlet {
             throws ServletException, IOException {
         try {
             processRequest(request, response);
-        } catch (SQLException ex) {
-            Logger.getLogger(login.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (ClassNotFoundException ex) {
+        } catch (SQLException | ClassNotFoundException ex) {
             Logger.getLogger(login.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
@@ -89,9 +89,7 @@ public class login extends HttpServlet {
             throws ServletException, IOException {
         try {
             processRequest(request, response);
-        } catch (SQLException ex) {
-            Logger.getLogger(login.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (ClassNotFoundException ex) {
+        } catch (SQLException | ClassNotFoundException ex) {
             Logger.getLogger(login.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
